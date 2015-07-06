@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="EnginPGPageDef"
+                Package="xxnvt.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="findAllDbObjects.result" DataControl="DbObjectTbl"
+                    RangeSize="25" BeanClass="xxnvt.model.dbobjects.DbObject"
+                    id="findAllDbObjectsIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="findAllDbObjects" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="findAllDbObjects"
+                  IsViewObjectMethod="false" DataControl="DbObjectTbl"
+                  InstanceName="DbObjectTbl.dataProvider"
+                  ReturnName="data.DbObjectTbl.methodResults.findAllDbObjects_DbObjectTbl_dataProvider_findAllDbObjects_result"/>
+    <tree IterBinding="findAllDbObjectsIterator" id="DbObject">
+      <nodeDefinition DefName="xxnvt.model.dbobjects.DbObject" Name="DbObject0">
+        <AttrNames>
+          <Item Value="SQLTypeName"/>
+          <Item Value="owner"/>
+          <Item Value="objectName"/>
+          <Item Value="subObjectName"/>
+          <Item Value="objectType"/>
+          <Item Value="timestamp"/>
+          <Item Value="status"/>
+          <Item Value="temporary"/>
+          <Item Value="generated"/>
+          <Item Value="secondary"/>
+          <Item Value="editionName"/>
+          <Item Value="objectSource"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
