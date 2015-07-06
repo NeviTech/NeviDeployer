@@ -22,7 +22,7 @@ import xxnvt.model.dbobjects.DbObject;
 import xxnvt.model.dbobjects.DbObjectTbl;
 
 public class EnginPGCO {
-    public EnginPGCO() {
+    public EnginPGCO() {//
     }
 
     public String ButtonClick() {
