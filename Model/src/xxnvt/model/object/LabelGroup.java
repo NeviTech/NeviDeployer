@@ -22,7 +22,7 @@ public class LabelGroup
         this.createdBy     = pCreatedBy;
         this.creationDate  = pLastUpdateDate;
         this.lastUpdatedBy = pLastUpdatedBy;
-    }//dual
+    }//dual//dsa
     
     String name;
     String subGroupName;
