@@ -1,0 +1,1 @@
+create or replace type apps.xxnvt_nd_db_information_tbl is table of xxnvt_db_information;

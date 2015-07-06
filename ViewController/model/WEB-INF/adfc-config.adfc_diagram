@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">EnginPG</property>
+      <property
+         name="page">/EnginPG.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>EnginPG&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">100.29883</property>
+      <property
+         name="x">94.0</property>
+   </View>
+</SDM>

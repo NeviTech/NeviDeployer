@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="xxnvt.model.NeviDeployerAM">
+      <AppModuleConfig name="NeviDeployerAMLocal" ApplicationName="xxnvt.model.NeviDeployerAM" DeployPlatform="LOCAL" jbo.project="xxnvt.model.Model">
+         <Security AppModuleJndiName="xxnvt.model.NeviDeployerAM"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/TURKCELL.TDEVDS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="NeviDeployerAMShared" ApplicationName="xxnvt.model.NeviDeployerAM" DeployPlatform="LOCAL" jbo.project="xxnvt.model.Model">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="xxnvt.model.NeviDeployerAM"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/TURKCELL.TDEVDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

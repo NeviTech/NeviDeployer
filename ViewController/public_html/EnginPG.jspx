@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <p>
+         
+      </p>
+      <p>
+         
+      </p>
+      <p>
+        <h:form id="f2">
+          <af:commandButton text="commandButton 1" id="cb1"
+                            action="#{EnginPGCO.ButtonClick}"/>
+        </h:form>
+      </p>
+      <p>
+         
+      </p>
+      <p>
+         
+      </p>
+      <af:form id="f1">
+        <af:messages id="m1"/>
+        <af:table value="#{bindings.DbObject.collectionModel}" var="row"
+                  rows="#{bindings.DbObject.rangeSize}"
+                  emptyText="#{bindings.DbObject.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  fetchSize="#{bindings.DbObject.rangeSize}"
+                  rowBandingInterval="0" id="t1" width="1500">
+          <af:column sortProperty="#{bindings.DbObject.hints.SQLTypeName.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.SQLTypeName.label}"
+                     id="c8">
+            <af:inputText value="#{row.bindings.SQLTypeName.inputValue}"
+                          label="#{bindings.DbObject.hints.SQLTypeName.label}"
+                          required="#{bindings.DbObject.hints.SQLTypeName.mandatory}"
+                          columns="#{bindings.DbObject.hints.SQLTypeName.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.SQLTypeName.precision}"
+                          shortDesc="#{bindings.DbObject.hints.SQLTypeName.tooltip}"
+                          id="it11">
+              <f:validator binding="#{row.bindings.SQLTypeName.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.owner.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.owner.label}"
+                     id="c9">
+            <af:inputText value="#{row.bindings.owner.inputValue}"
+                          label="#{bindings.DbObject.hints.owner.label}"
+                          required="#{bindings.DbObject.hints.owner.mandatory}"
+                          columns="#{bindings.DbObject.hints.owner.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.owner.precision}"
+                          shortDesc="#{bindings.DbObject.hints.owner.tooltip}"
+                          id="it9">
+              <f:validator binding="#{row.bindings.owner.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.objectName.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.objectName.label}"
+                     id="c4">
+            <af:inputText value="#{row.bindings.objectName.inputValue}"
+                          label="#{bindings.DbObject.hints.objectName.label}"
+                          required="#{bindings.DbObject.hints.objectName.mandatory}"
+                          columns="#{bindings.DbObject.hints.objectName.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.objectName.precision}"
+                          shortDesc="#{bindings.DbObject.hints.objectName.tooltip}"
+                          id="it10">
+              <f:validator binding="#{row.bindings.objectName.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.subObjectName.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.subObjectName.label}"
+                     id="c3">
+            <af:inputText value="#{row.bindings.subObjectName.inputValue}"
+                          label="#{bindings.DbObject.hints.subObjectName.label}"
+                          required="#{bindings.DbObject.hints.subObjectName.mandatory}"
+                          columns="#{bindings.DbObject.hints.subObjectName.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.subObjectName.precision}"
+                          shortDesc="#{bindings.DbObject.hints.subObjectName.tooltip}"
+                          id="it8">
+              <f:validator binding="#{row.bindings.subObjectName.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.objectType.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.objectType.label}"
+                     id="c1">
+            <af:inputText value="#{row.bindings.objectType.inputValue}"
+                          label="#{bindings.DbObject.hints.objectType.label}"
+                          required="#{bindings.DbObject.hints.objectType.mandatory}"
+                          columns="#{bindings.DbObject.hints.objectType.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.objectType.precision}"
+                          shortDesc="#{bindings.DbObject.hints.objectType.tooltip}"
+                          id="it2">
+              <f:validator binding="#{row.bindings.objectType.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.timestamp.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.timestamp.label}"
+                     id="c2">
+            <af:inputText value="#{row.bindings.timestamp.inputValue}"
+                          label="#{bindings.DbObject.hints.timestamp.label}"
+                          required="#{bindings.DbObject.hints.timestamp.mandatory}"
+                          columns="#{bindings.DbObject.hints.timestamp.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.timestamp.precision}"
+                          shortDesc="#{bindings.DbObject.hints.timestamp.tooltip}"
+                          id="it7">
+              <f:validator binding="#{row.bindings.timestamp.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.status.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.status.label}"
+                     id="c10">
+            <af:inputText value="#{row.bindings.status.inputValue}"
+                          label="#{bindings.DbObject.hints.status.label}"
+                          required="#{bindings.DbObject.hints.status.mandatory}"
+                          columns="#{bindings.DbObject.hints.status.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.status.precision}"
+                          shortDesc="#{bindings.DbObject.hints.status.tooltip}"
+                          id="it4">
+              <f:validator binding="#{row.bindings.status.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.temporary.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.temporary.label}"
+                     id="c5">
+            <af:inputText value="#{row.bindings.temporary.inputValue}"
+                          label="#{bindings.DbObject.hints.temporary.label}"
+                          required="#{bindings.DbObject.hints.temporary.mandatory}"
+                          columns="#{bindings.DbObject.hints.temporary.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.temporary.precision}"
+                          shortDesc="#{bindings.DbObject.hints.temporary.tooltip}"
+                          id="it6">
+              <f:validator binding="#{row.bindings.temporary.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.generated.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.generated.label}"
+                     id="c6">
+            <af:inputText value="#{row.bindings.generated.inputValue}"
+                          label="#{bindings.DbObject.hints.generated.label}"
+                          required="#{bindings.DbObject.hints.generated.mandatory}"
+                          columns="#{bindings.DbObject.hints.generated.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.generated.precision}"
+                          shortDesc="#{bindings.DbObject.hints.generated.tooltip}"
+                          id="it5">
+              <f:validator binding="#{row.bindings.generated.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.secondary.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.secondary.label}"
+                     id="c11">
+            <af:inputText value="#{row.bindings.secondary.inputValue}"
+                          label="#{bindings.DbObject.hints.secondary.label}"
+                          required="#{bindings.DbObject.hints.secondary.mandatory}"
+                          columns="#{bindings.DbObject.hints.secondary.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.secondary.precision}"
+                          shortDesc="#{bindings.DbObject.hints.secondary.tooltip}"
+                          id="it12">
+              <f:validator binding="#{row.bindings.secondary.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.editionName.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.editionName.label}"
+                     id="c7">
+            <af:inputText value="#{row.bindings.editionName.inputValue}"
+                          label="#{bindings.DbObject.hints.editionName.label}"
+                          required="#{bindings.DbObject.hints.editionName.mandatory}"
+                          columns="#{bindings.DbObject.hints.editionName.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.editionName.precision}"
+                          shortDesc="#{bindings.DbObject.hints.editionName.tooltip}"
+                          id="it1">
+              <f:validator binding="#{row.bindings.editionName.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.DbObject.hints.objectSource.name}"
+                     sortable="false"
+                     headerText="#{bindings.DbObject.hints.objectSource.label}"
+                     id="c12">
+            <af:inputText value="#{row.bindings.objectSource.inputValue}"
+                          label="#{bindings.DbObject.hints.objectSource.label}"
+                          required="#{bindings.DbObject.hints.objectSource.mandatory}"
+                          columns="#{bindings.DbObject.hints.objectSource.displayWidth}"
+                          maximumLength="#{bindings.DbObject.hints.objectSource.precision}"
+                          shortDesc="#{bindings.DbObject.hints.objectSource.tooltip}"
+                          id="it3">
+              <f:validator binding="#{row.bindings.objectSource.validator}"/>
+            </af:inputText>
+          </af:column>
+        </af:table>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
