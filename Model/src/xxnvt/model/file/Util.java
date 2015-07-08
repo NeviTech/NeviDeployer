@@ -12,9 +12,11 @@ public class Util {
     
     public static void main(String[] args) {
         
-        File f = new File("C:\\Users\\ext0193916\\Desktop\\CC creator\\DeploymentPackageCreator\\sample\\dev0001\\files\\fmb\\");
+        File f = new File("C:\\DevSuiteHome_1\\jdevhome\\jdev\\mywork\\");
         List file = new ArrayList();
         getFileList(f,file);
+        
+        System.out.println("file.length -->"+file.size());
     }
 
     @SuppressWarnings("unchecked")
