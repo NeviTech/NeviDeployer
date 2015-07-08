@@ -1,14 +1,12 @@
 package xxnvt.model.file;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
-package xxtg.fnd.deployment.util;
-
-import java.util.Iterator;
-import java.util.NoSuchElementException;
 
 
 public class ArrayIterator implements Iterator {
