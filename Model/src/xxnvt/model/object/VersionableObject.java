@@ -26,7 +26,7 @@ public class VersionableObject
     Number      lastUpdateLogin;
     Date        lastUpdateDate;
     Number      lastUpdatedBy;
-    List<Label> labelList;
+    List<Label> labelList; 
 
     public void setObjectId(Number objectId) {
         this.objectId = objectId;
